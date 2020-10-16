@@ -1,0 +1,37 @@
+/* .splash-form {
+    display: flex;
+    flex-direction: column;
+} */
+
+.splash-nav {
+    height: 100px;
+    background-color: red;
+}
+
+.splash-nav-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.splash-nav-col a{
+    color: white;
+}
+
+/* .external-links-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+} */
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+.sign-up-link {
+    padding: 5px 15px;
+    border: 2px solid white;
+}
