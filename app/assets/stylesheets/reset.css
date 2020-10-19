@@ -141,6 +141,6 @@ body,
     width: 100%;
     height: 100%;
 }
-a, h1, h2, h3, h4 {
+a, h1, h2, h3, h4, button, div {
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
