@@ -60,3 +60,15 @@
     flex-direction: column;
     align-items: center;
 }
+
+.splash-search {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.splash-search input {
+    padding: 10px;
+    height: 50px;
+}

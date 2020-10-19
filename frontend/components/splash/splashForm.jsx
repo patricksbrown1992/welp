@@ -1,15 +1,27 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link } from 'react-router-dom';
-
+// import google from 'google-map-react'
 
 
 const splashForm = () => {
     const [splashSearch, updateSplashSearch] = useState(() => '')
-
+    let currentLocation = 'Not found'
     function changeSplash(e){
         e.preventDefault();
         updateSplashSearch(e.target.value); 
     }
+
+    useEffect(() => {
+        navigator.geolocation.getCurrentPosition(function(position){
+            // let geocoder  = new google.maps.Geocoder(); 
+           
+            // var location  = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            // currentLocation = position
+        })
+       
+    }, [])
+   
+
 
     return (
         <div className = 'splash-form'> 
@@ -35,20 +47,24 @@ const splashForm = () => {
         
 
             </div>
-            <div className='splash-body'>
+            <div className='splash-body col'>
                 <div className="splash-logo">
                     <h1 className='title'>Welp</h1>
-                    <img src={window.logo} alt="" />
+                    <img className='logo-img' src={window.logo} alt="" />
                 </div>
-                <div className="splash-search">
+                <div className="splash-search row">
                     <input 
+                        className = 'col-md-6'
                         type="text" 
                         name="splash-search" 
                         onChange={changeSplash} 
                         value={splashSearch}
                         placeholder='plumbers, delivery, takeout...'
                     />
+                    {/* <div >{currentLocation}</div> */}
                 </div>
+                
+                
             </div>
         
         
